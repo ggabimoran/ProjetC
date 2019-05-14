@@ -1,0 +1,48 @@
+/****************************************************************************/
+/** Software: GUI prototype dedicated to master-mind                       **/
+/** Author  : Ivan Auge (Email: auge@ensiie.fr)                            **/
+/****************************************************************************/
+
+DESCRIPTION:
+
+  Un prototype d'interface basée sur GTK pour le jeu du MasterMind.
+
+     +-----------------+----------+
+     +                 + btn undo +
+     +                 +----------+
+     +     canvas      + btn help +
+     +                 +----------+
+     +                 + btn quit +
+     +-----------------+----------+
+
+COMPILATION
+
+  Nécessite que GTK 3.0 soit installé en version développement.
+
+   $ bash cmd.sh
+
+CONTENU
+  gui-top.h/.c : Les macros et types de bases.
+  canvas.h/.c  : Le  widget qui gère l'affichage du jeu et la saisie
+                 de segments.
+  gui.h/.c     : La création/destruction de la GUI.
+                 Les fonctions de bases pour interagir avec la GUI.
+  gtk-main.c   : Un petit exemple qui montre l'utilisation de la GUI.
+                 Il n'utilise que les primitives de gui.h.
+
+POUR VOTRE PROJET:
+  Etape 1: Implémenter vos fonction d'interface en utilisant les fonctions
+           de gui.h.
+           En théorie ca doit être possible sauf pour le score courant.
+  Etape 2: Introduisez le score courant dans l'interface. Ca doit être
+           possible avec 1 ou 2 labels (https://developer.gnome.org/gtk3/stable/GtkLabel.html).
+           Ca se passe dans gui_open et Tgui.
+  Etape 3: Diverses améliorations sont possibles:
+              - saisir que des lignes de 5 points dans les 8 directions (modif. de canvas.c)
+              - pouvoir changer l'espace entre les points.
+              - améliorer le design.
+              - pouvoir changer la taille de la fenètre.
+              - ...
+
+BUG:
+ Si vous détectez un bug, merci de me le remonter.
